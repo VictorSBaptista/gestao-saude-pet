@@ -1,0 +1,39 @@
+<!-- menu -->
+<div class="navbar-fixed" style="z-index: 1001 !important">
+  <nav>
+    <div class="nav-wrapper blue accent-4">
+      <div class="container">
+        <a class="brand-logo" href="#">
+          <img class="my-logo" style="width: 63px; color: rgb(41, 98, 255);" src="/assets/resources/images/logo.png" />
+        </a>
+        <a href="#" data-target="mobile-demo" class="sidenav-trigger">
+          <i class="material-icons">menu</i>
+        </a>
+
+        <ul class="right hide-on-med-and-down">
+          <li><a [routerLink]="'/cadastrar-pet'" class="flow-text">Cadastrar Pet</a></li>
+          <li><a [routerLink]="'/cuidados-basicos'" class="flow-text">Cuidados Básicos</a></li>
+          <li><a [routerLink]="'/inicio'" class="btn-floating btn-large waves-effect waves-light red"><i class="large material-icons">home</i></a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <ul class="sidenav blue" id="mobile-demo" #mobile>
+    <div class="row">
+      <div class="col s8 offset-s2">
+        <div class="center">
+          <img
+            class="circle responsive-img"
+            style="color: rgb(41, 98, 255);"
+            src="/assets/resources/images/logo.png"
+          />
+        </div>
+      </div>
+    </div>
+    <li><a [routerLink]="'/inicio'" class="btn-floating btn-large waves-effect waves-light red"><i class="large material-icons">home</i></a></li>
+    <li><a [routerLink]="'/cadastrar-pet'" class="flow-text">Cadastrar Pet</a></li>
+    <li><a [routerLink]="'/cuidados-basicos'" class="flow-text">Cuidados Básicos</a></li>
+  </ul>
+</div>
+<!-- fim menu -->
