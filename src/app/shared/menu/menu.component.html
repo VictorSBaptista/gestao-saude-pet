@@ -1,0 +1,47 @@
+<!-- menu -->
+<div class="navbar-fixed" style="z-index: 1001 !important">
+  <nav>
+    <div class="nav-wrapper blue accent-4">
+      <div class="container">
+        <a class="brand-logo" href="#">
+          <img class="my-logo" src="assets/resources/images/logo.png" />
+        </a>
+        <a href="#" data-target="mobile-demo" class="sidenav-trigger">
+          <i class="material-icons">menu</i>
+        </a>
+        <!--logado-->
+        <ul class="right hide-on-med-and-down" [hidden]="!this.loggedIn">
+          <li><a [routerLink]="'a/usuarios'" class="flow-text">Cadastrar Pet</a></li>
+          <li><a [routerLink]="'/cuidados-basicos'" class="flow-text">Cuidados Básicos</a></li>
+          <li>
+            <a class="flow-text" (click)="onLogout()">Sair</a>
+          </li>
+        </ul>
+        <!--logado-->
+      </div>
+    </div>
+  </nav>
+
+  <ul class="sidenav blue" id="mobile-demo" #mobile>
+    <div class="row">
+      <div class="col s8 offset-s2">
+        <div class="center">
+          <img
+            class="circle responsive-img"
+            src="assets/resources/images/logo.png"
+          />
+        </div>
+      </div>
+    </div>
+    <!--logado-->
+    <div *ngIf="this.loggedIn">
+      <li><a [routerLink]="'a/usuarios'" class="flow-text">Cadastrar Pet</a></li>
+      <li><a [routerLink]="'/cuidados-basicos'" class="flow-text">Cuidados Básicos</a></li>
+      <li>
+        <a class="flow-text" (click)="onLogout()">Sair</a>
+      </li>
+    </div>
+    <!--logado-->
+  </ul>
+</div>
+<!-- fim menu -->
